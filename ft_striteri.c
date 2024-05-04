@@ -1,33 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 13:44:15 by alramire          #+#    #+#             */
-/*   Updated: 2024/05/04 16:53:32 by alejandrora      ###   ########.fr       */
+/*   Created: 2024/05/04 16:49:13 by alejandrora       #+#    #+#             */
+/*   Updated: 2024/05/04 16:49:15 by alejandrora      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	char	*tmp;
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	tmp = (char *)malloc(ft_strlen(s1));
-	while (s1[i])
-	{
-		while (s1[i] && s1[i + j] == set[j])
-		{
-			tmp[i] = s1[i];
-		}
-		i++;
-	}
-	return (tmp);
-}

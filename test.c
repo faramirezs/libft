@@ -3,16 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 10:35:16 by alramire          #+#    #+#             */
-/*   Updated: 2024/04/29 13:37:07 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:31:40 by alejandrora      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "libft.h" // Make sure this includes the prototype for ft_itoa
 
-int main()
+void test_ft_itoa(int n, const char* expected) {
+    char* result = ft_itoa(n);
+    if (strcmp(result, expected) == 0) {
+        printf("PASS: %d -> %s\n", n, result);
+    } else {
+        printf("FAIL: %d -> %s (expected %s)\n", n, result, expected);
+    }
+    free(result); // Don't forget to free the memory allocated by ft_itoa
+}
+
+int main() {
+    // Test cases
+    test_ft_itoa(0, "0");
+    test_ft_itoa(123, "123");
+    test_ft_itoa(-123, "-123");
+    test_ft_itoa(2147483647, "2147483647"); // INT_MAX
+    test_ft_itoa(-2147483648, "-2147483648"); // INT_MIN
+
+    // Add more test cases as needed
+
+    return 0;
+}
+
+/* int main()
 {
 
 	char *s1, *s2, *result;
@@ -39,7 +65,7 @@ int main()
     free(result); // Remember to free the memory
 
     return 0;
-
+ */
 
 
 
@@ -123,6 +149,6 @@ int main()
     printf("Return value: %zu\n", ft_strlcpy(dest, "Hello, world!", sizeof(dest)));
     printf("Destination: %s\n", dest);
 
-    return 0; */
+    return 0;
 
-}
+}*/
