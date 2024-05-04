@@ -6,7 +6,7 @@
 /*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:02:44 by alramire          #+#    #+#             */
-/*   Updated: 2024/05/03 16:41:46 by alejandrora      ###   ########.fr       */
+/*   Updated: 2024/05/04 18:20:05 by alejandrora      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	len;
 
 	len = ft_strlen(src);
-/* 	if (dstsize <= len)
-		dst[dstsize] = '\0';
-	if (dstsize == 0)
-		dst[0] = '\0';
-		return (len); */
-
+	if (dstsize <= len)
 
 	if (len + 1 < dstsize)
 	{
@@ -32,5 +27,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	{
 		ft_memcpy(dst, src, dstsize - 1);
 	}
+	dst[len] = '\0';
 	return (len);
 }
