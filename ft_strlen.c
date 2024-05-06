@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_srtlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:45:12 by alramire          #+#    #+#             */
-/*   Updated: 2024/04/24 15:18:55 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:30:37 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ size_t	ft_strlen(char const *s)
 		i++;
 	return (i);
 }
-
-/* int main(void){
-    char str[] = "Hello";
-    ft_strlen(str);
-    printf("The len of the string is %d", ft_strlen(str));
-    return 0;
-} */

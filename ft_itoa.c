@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
+/*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:00:09 by alramire          #+#    #+#             */
-/*   Updated: 2024/05/04 18:19:14 by alejandrora      ###   ########.fr       */
+/*   Updated: 2024/05/06 11:54:20 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ static char	*ft_tmp(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*s;
-	int		len;
-	long long num;
+	char		*s;
+	int			len;
+	long long	num;
 
 	num = (long long)n;
 	len = ft_n_size(n);

@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+         #
+#    By: alramire <alramire@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 11:33:51 by alramire          #+#    #+#              #
-#    Updated: 2024/05/04 16:42:32 by alejandrora      ###   ########.fr        #
+#    Updated: 2024/05/06 15:37:58 by alramire         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc -c
+CC = cc -c
 FLAGS = -Wall -Wextra -Werror
 # SRCS = *.c
 SRCS = \

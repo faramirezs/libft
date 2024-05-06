@@ -6,7 +6,7 @@
 /*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:40:10 by alramire          #+#    #+#             */
-/*   Updated: 2024/04/29 12:41:18 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:56:24 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*tmp;
-	int	i;
+	int		i;
 
 	i = 0;
 	tmp = malloc(ft_strlen(s1) + 1);

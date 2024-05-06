@@ -3,18 +3,53 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
+/*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 10:35:16 by alramire          #+#    #+#             */
-/*   Updated: 2024/05/04 17:31:40 by alejandrora      ###   ########.fr       */
+/*   Updated: 2024/05/06 12:17:50 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "libft.h" // Make sure this includes the prototype for ft_itoa
+#include "libft.h"
 
+void test_ft_strrchr(void) {
+    printf("=== Testing ft_strrchr ===\n");
+
+    struct {
+        const char *str;
+        int ch;
+        const char *expected;
+    } testCases[] = {
+        {"Hello, world!", 'w', "world!"},
+        {"Hello, world!", 'H', "Hello, world!"},
+        {"Repeat, repeat, repeat", 'p', "peat, repeat"},
+        {"No occurrence", 'x', NULL},
+        {"End of string\0x", 'x', "x"},
+        {"", 'a', NULL}, // Testing empty string
+    };
+
+    int numTests = sizeof(testCases) / sizeof(testCases[0]);
+    int passed = 0;
+
+    for (int i = 0; i < numTests; i++) {
+        const char *result = ft_strrchr(testCases[i].str, testCases[i].ch);
+        if ((result == testCases[i].expected) || (result && testCases[i].expected && strcmp(result, testCases[i].expected) == 0)) {
+            printf("\x1B[32mTest %d passed.\n", i + 1); // Green for success
+            passed++;
+        } else {
+            printf("\x1B[31mTest %d failed: ft_strrchr(\"%s\", '%c') expected \"%s\", got \"%s\"\n",
+                   i + 1, testCases[i].str, testCases[i].ch, testCases[i].expected, result ? result : "NULL"); // Red for failure
+        }
+    }
+
+    printf("\x1B[0m"); // Reset to default color
+    printf("Passed %d out of %d tests.\n\n\n", passed, numTests);
+}
+
+// Note: You'll need to define ft_strrchr somewhere in your codebase for this to work.
 void test_ft_itoa(int n, const char* expected) {
     char* result = ft_itoa(n);
     if (strcmp(result, expected) == 0) {
@@ -32,6 +67,7 @@ int main() {
     test_ft_itoa(-123, "-123");
     test_ft_itoa(2147483647, "2147483647"); // INT_MAX
     test_ft_itoa(-2147483648, "-2147483648"); // INT_MIN
+	test_ft_strrchr();
 
     // Add more test cases as needed
 

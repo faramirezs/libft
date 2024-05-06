@@ -6,34 +6,34 @@
 /*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:24:53 by alramire          #+#    #+#             */
-/*   Updated: 2024/04/24 15:11:38 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:56:52 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-int ft_isascii(int c){
-    return((c >= 0) && (c <= 127));
+int	ft_isascii(int c)
+{
+	return ((c >= 0) && (c <= 127));
 }
 
 /* int main()
 {
-    char c;
-    char result;
+	char c;
+	char result;
 
-    c = 'a';
-    result = ft_isascii(c);
-    printf("The result is for %d is %d\n", c, result);
-
-
-    c = '2';
-    result = ft_isascii(c);
-    printf("The result is for %d is %d\n", c, result);
+	c = 'a';
+	result = ft_isascii(c);
+	printf("The result is for %d is %d\n", c, result);
 
 
-    c = '*';
-    result = ft_isascii(c);
-    printf("The result is for %d is %d\n", c, result);
-    return 0;
+	c = '2';
+	result = ft_isascii(c);
+	printf("The result is for %d is %d\n", c, result);
+
+
+	c = '*';
+	result = ft_isascii(c);
+	printf("The result is for %d is %d\n", c, result);
+	return (0);
 } */
-

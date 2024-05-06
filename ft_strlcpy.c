@@ -6,7 +6,7 @@
 /*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:02:44 by alramire          #+#    #+#             */
-/*   Updated: 2024/05/06 11:09:59 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/06 15:30:06 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	len = ft_strlen(src);
 	if (len + 1 <= dstsize)
-		ft_memcpy(dst, src, len + 1);
+	{
+		ft_memcpy(dst, src, len);
+		dst[len] = '\0';
+	}
 	else if (dstsize != 0)
+	{
 		ft_memcpy(dst, src, dstsize - 1);
-	dst[dstsize - 1] = '\0';
+		dst[dstsize - 1] = '\0';
+	}
 	return (len);
 }

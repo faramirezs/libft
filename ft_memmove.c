@@ -6,7 +6,7 @@
 /*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 20:00:13 by alramire          #+#    #+#             */
-/*   Updated: 2024/04/24 14:01:40 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:37:24 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	char	*ptr_dest;
-	char	*ptr_src;
+	size_t			i;
+	unsigned char	*ptr_dest;
+	unsigned char	*ptr_src;
 
 	i = 0;
-	ptr_dest = (char *) dest;
-	ptr_src = (char *) src;
 	if (!dest && !src)
 		return (NULL);
+	ptr_dest = (unsigned char *) dest;
+	ptr_src = (unsigned char *) src;
 	if (dest > src)
-		while (n-- > 0)
+		while (n--)
 			ptr_dest[n] = ptr_src[n];
 	else
 	{
@@ -36,24 +36,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/* #include <stdio.h>
-#include <string.h>
-
-int main() {
-    char str[] = "Hello, World!";
-    printf("Before memmove: %s\n", str);
-
-    // Move the substring "World" two places to the right
-    memmove(&str[7], &str[9], 6);
-    printf("After memmove: %s\n", str);
-
-	char str2[] = "Hello, World!";
-    printf("Before memmove: %s\n", str2);
-
-    // Move the substring "World" two places to the right
-    ft_memmove(&str2[7], &str2[9], 6);
-    printf("After memmove: %s\n", str2);
-
-    return 0;
-} */

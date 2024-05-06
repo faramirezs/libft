@@ -6,7 +6,7 @@
 /*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:31:42 by alramire          #+#    #+#             */
-/*   Updated: 2024/04/26 16:50:34 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:31:00 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ void	*ft_memset(void *s, int c, size_t n)
 		ptr[i++] = c;
 	return (s);
 }
-
-/* int main(void){
-    char str[50] = "This is a test string";
-    printf("Before memset: %s\n", str);
-    ft_memset(str, 'b', 5);
-    printf("The new string is %s", str);
-    return 0;
-} */
