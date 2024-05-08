@@ -6,7 +6,7 @@
 /*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:27:01 by alramire          #+#    #+#             */
-/*   Updated: 2024/05/06 17:37:19 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/08 08:48:07 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	ft_free(char **strs, int n)
 	free(strs);
 }
 
-static int	ft_words (char const *s, char d)
+static int	ft_words(char const *s, char d)
 {
 	int	i;
 	int	j;
@@ -44,17 +44,15 @@ static int	ft_words (char const *s, char d)
 int	ft_words_chars(char const *s, char d, int word)
 {
 	int	i;
-	int	j;
 	int	k;
 
 	i = 0;
-	j = 0;
 	k = 0;
 	while (s[i])
 	{
 		if (s[i] != d && (i == 0 || s[i - 1] == d))
-			j++;
-		if (j == word)
+			word--;
+		if (word == 0)
 		{
 			while (s[i] != d && s[i] != '\0')
 			{
@@ -63,12 +61,9 @@ int	ft_words_chars(char const *s, char d, int word)
 			}
 			break ;
 		}
-		else if (s[i] != d)
-		{
-			while (s[i] != d && s[i] != '\0')
-				i++;
-		}
-		else
+		while (s[i] != d && s[i] != '\0')
+			i++;
+		if (s[i] == d)
 			i++;
 	}
 	return (k);
