@@ -6,7 +6,7 @@
 /*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:27:01 by alramire          #+#    #+#             */
-/*   Updated: 2024/05/01 14:57:03 by alramire         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:37:19 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,4 +126,3 @@ char	**ft_split(char const *s, char c)
 	ft_writer(s, tmp, c, words);
 	return (tmp);
 }
-
